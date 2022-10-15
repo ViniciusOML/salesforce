@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Query Studio Results</title>
+</head>
+<body>
+
+    <h1>Escolha a sua Stack</h1>
+
+    <form>
+      <label><input type="radio" id="stack11" name="stack" value="https://mc.s11.exacttarget.com" onclick="document.getElementById('link').innerHTML = de_result('stack11')"> STACK 11</label>
+     <br><br>
+     <label> <input type="radio" id="stack7" name="stack" value="https://mc.s7.exacttarget.com" onclick="document.getElementById('link').innerHTML = de_result('stack7')"> STACK 7</label>
+  <br> <br>
+    
+<p id="link"></p>
+     
+<script>
+    function de_result(stack){
+
+       let stack_url = document.activeElement.attributes.value.nodeValue;
+       let url = "https://www.validateste.com.br/contact/urldatabela_stack"; //document.location.href;
+       let url_deletado = url.lastIndexOf('/contact');
+       let url_de = url.slice(url_deletado);
+       let redirect = stack_url+url_de
+
+        return  document.write('<a href="'+redirect+'" target=blank>Clique aqui</a>');
+    }
+  
+</script>
+
+</form>
+<br>
+
+
+
+</body>
+</html>
